@@ -6,23 +6,24 @@
 
 // import {AppRegistry} from 'react-native';
 // import App from './App';
-import {name as appName} from './app.json';
+import React from 'react';
+import { AppRegistry, View, StyleSheet } from 'react-native';
+import { name as appName } from './app.json';
 import Header from './src/components/Header';
-import AlbumList from './src/components/AlbumList'
+import AlbumList from './src/components/AlbumList';
 // AppRegistry.registerComponent(appName, () => App);
 
 // Import a library to help create a component
-import React from 'react';
-import { AppRegistry, Text, View, StyleSheet } from 'react-native';
+
+
 // create a component
-const App = () => {
-  return (
+const App = () => (
     <View style={styles.container}>
-      <Header headerText={'Albums'}/>
+      <Header headerText={'Albums'} />
       <AlbumList />
     </View>
-  )
-}
+  );
+
 // render to a device
 AppRegistry.registerComponent(appName, () => App);
 
